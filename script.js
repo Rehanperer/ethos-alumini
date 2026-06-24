@@ -126,4 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.add('active');
         });
     });
+
+    // Hero Slideshow Logic
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 0) {
+        let currentSlide = 0;
+        setInterval(() => {
+            heroSlides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % heroSlides.length;
+            heroSlides[currentSlide].classList.add('active');
+        }, 5000); // Change slide every 5 seconds
+    }
 });
