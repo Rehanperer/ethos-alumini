@@ -274,6 +274,8 @@ h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 600; }
 
 .hero-title { font-size: 5rem; line-height: 1.1; margin-bottom: 1.5rem; color: #ffffff; }
 .hero-subtitle { font-size: 1.35rem; color: rgba(255, 255, 255, 0.9); margin-bottom: 2.5rem; max-width: 600px; }
+.hero-btn { color: #ffffff !important; border-color: rgba(255, 255, 255, 0.4) !important; background: rgba(255, 255, 255, 0.1) !important; }
+.hero-btn:hover { background: rgba(255, 255, 255, 0.2) !important; border-color: #ffffff !important; }
 
 /* --- CINEMATIC HORIZONTAL SCROLL STORY --- */
 .horizontal-scroll-section {
