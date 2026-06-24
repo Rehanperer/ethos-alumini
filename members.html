@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethos Alumni - Members</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="js-enabled">
+    <!-- Ambient Glows -->
+    <div class="purple-glow"></div>
+    <div class="gold-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Ethos Alumni Logo" class="logo-img">
+            <span>Ethos</span>
+        </div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="index.html#about" class="nav-item">Story</a></li>
+                <li><a href="index.html#network" class="nav-item">Network</a></li>
+                <li><a href="members.html" class="nav-item">Members</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                <a href="#contact" class="btn-primary btn-nav">Join Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header members-header">
+        <h1 class="fade-up">Alumni <span class="gradient-text">Directory</span></h1>
+        <p class="fade-up delay-1">Discover and connect with our global network of leaders.</p>
+        
+        <div class="filters fade-up delay-2">
+            <button class="filter-btn active">All Members</button>
+            <button class="filter-btn">Founders</button>
+            <button class="filter-btn">Executives</button>
+            <button class="filter-btn">Mentors</button>
+        </div>
+    </header>
+
+    <section class="members-directory bg-glass" style="min-height: 80vh;">
+        <div class="container">
+            <div class="cards-grid" id="members-grid">
+                <!-- Member 1 -->
+                <div class="glass-card spotlight-card member-card scroll-reveal">
+                    <div class="member-avatar-wrap">
+                        <div class="avatar-ring"></div>
+                        <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                    </div>
+                    <h3>Eleanor Vance</h3>
+                    <p class="member-role">CEO, Nexus Tech</p>
+                    <p>Pioneering AI-driven logistics solutions globally.</p>
+                    <div class="member-socials">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Member 2 -->
+                <div class="glass-card spotlight-card member-card scroll-reveal delay-1">
+                    <div class="member-avatar-wrap">
+                        <div class="avatar-ring"></div>
+                        <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                    </div>
+                    <h3>Marcus Sterling</h3>
+                    <p class="member-role">Managing Partner</p>
+                    <p>Over 15 years advising Fortune 500 executives.</p>
+                    <div class="member-socials">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+                
+                <!-- Member 3 -->
+                <div class="glass-card spotlight-card member-card scroll-reveal delay-2">
+                    <div class="member-avatar-wrap">
+                        <div class="avatar-ring"></div>
+                        <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                    </div>
+                    <h3>Sophia Lin</h3>
+                    <p class="member-role">Lead Designer</p>
+                    <p>Award-winning architect and creative visionary.</p>
+                    <div class="member-socials">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Member 4 -->
+                <div class="glass-card spotlight-card member-card scroll-reveal">
+                    <div class="member-avatar-wrap">
+                        <div class="avatar-ring"></div>
+                        <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                    </div>
+                    <h3>Julian Hayes</h3>
+                    <p class="member-role">Founder</p>
+                    <p>Venture capitalist focused on sustainable energy.</p>
+                    <div class="member-socials">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+
+                <!-- Member 5 -->
+                <div class="glass-card spotlight-card member-card scroll-reveal delay-1">
+                    <div class="member-avatar-wrap">
+                        <div class="avatar-ring"></div>
+                        <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1551836022-4c4c79ecde51?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                    </div>
+                    <h3>Isabella Rossi</h3>
+                    <p class="member-role">Chief Medical Officer</p>
+                    <p>Pioneer in telemedicine and remote patient care.</p>
+                    <div class="member-socials">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                    </div>
+                </div>
+
+                <!-- Member 6 -->
+                <div class="glass-card spotlight-card member-card scroll-reveal delay-2">
+                    <div class="member-avatar-wrap">
+                        <div class="avatar-ring"></div>
+                        <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                    </div>
+                    <h3>David Chen</h3>
+                    <p class="member-role">Director of Engineering</p>
+                    <p>Scaling data infrastructure for the top 100 banks.</p>
+                    <div class="member-socials">
+                        <a href="#"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h2 class="gradient-text">Ethos Alumni</h2>
+                <p>&copy; 2026 Ethos Alumni. All Rights Reserved.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" class="social-icon" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
