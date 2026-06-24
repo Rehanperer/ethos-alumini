@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="js-enabled">
-    <!-- Ambient Glows -->
+
+    <!-- Ambient Glows & Film Grain -->
     <div class="purple-glow"></div>
     <div class="gold-glow"></div>
+    <div class="film-grain"></div>
 
     <nav class="navbar">
         <div class="logo">
@@ -54,69 +56,97 @@
             </div>
         </section>
 
-        <!-- Scrollytelling Story (About) -->
-        <section id="about" class="scrolly-story">
-            <div class="sticky-story">
-                <div class="story-step step-1">
-                    <div class="story-card">
-                        <h2>Our <span class="gradient-text">Story</span></h2>
-                    </div>
+        <!-- Cinematic Horizontal Scroll Story -->
+        <section id="about" class="horizontal-scroll-section">
+            <div class="horizontal-scroll-wrapper">
+                <div class="horizontal-panel intro-panel">
+                    <h2 class="massive-text gs-reveal">Our <span class="gradient-text">Story</span></h2>
                 </div>
-                <div class="story-step step-2">
-                    <div class="story-card">
+                <div class="horizontal-panel image-panel">
+                    <div class="cinematic-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1500&auto=format&fit=crop" class="parallax-img" alt="Community">
+                    </div>
+                    <div class="panel-content gs-reveal">
                         <p>Ethos Alumni represents a global community of innovators, leaders, and pioneers.</p>
                     </div>
                 </div>
-                <div class="story-step step-3">
-                    <div class="story-card">
+                <div class="horizontal-panel image-panel">
+                    <div class="cinematic-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1500&auto=format&fit=crop" class="parallax-img" alt="Impact">
+                    </div>
+                    <div class="panel-content gs-reveal">
                         <p>Our mission is to foster lifelong connections and empower our members to achieve extraordinary impact.</p>
                     </div>
+                </div>
+                <div class="horizontal-panel outro-panel">
+                    <h2 class="massive-text gs-reveal">Leave a <span class="gradient-text">Legacy</span></h2>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Normal Flow Sections -->
-    <section id="network" class="network-section bg-glass">
+    <!-- Cinematic Zig-Zag Community -->
+    <section id="network" class="zigzag-section bg-glass">
         <div class="container">
             <h2 class="section-title text-center scroll-reveal">The <span class="gradient-text">Community</span></h2>
-            <div class="cards-grid">
-                <div class="glass-card member-card scroll-reveal">
-                    <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop'); background-size: cover;"></div>
+            
+            <div class="zigzag-row scroll-reveal">
+                <div class="zigzag-content">
                     <h3>Global Reach</h3>
-                    <p>Connect with alumni across 50+ countries around the world.</p>
+                    <p>Connect with alumni across 50+ countries. Our network spans every continent, uniting brilliant minds under a single ethos. Whether you're in London, Tokyo, or New York, you're never far from a trusted partner.</p>
                 </div>
-                <div class="glass-card member-card scroll-reveal delay-1">
-                    <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                <div class="zigzag-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1500&auto=format&fit=crop" alt="Global Reach">
+                </div>
+            </div>
+
+            <div class="zigzag-row reverse scroll-reveal delay-1">
+                <div class="zigzag-content">
                     <h3>Exclusive Events</h3>
-                    <p>Access to private galas, seminars, and luxury retreats.</p>
+                    <p>Gain access to private galas, high-stakes seminars, and luxury retreats. We curate environments where meaningful conversations happen naturally, and where the next big ideas are born.</p>
                 </div>
-                <div class="glass-card member-card scroll-reveal delay-2">
-                    <div class="member-avatar" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop'); background-size: cover;"></div>
+                <div class="zigzag-image">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1500&auto=format&fit=crop" alt="Exclusive Events">
+                </div>
+            </div>
+
+            <div class="zigzag-row scroll-reveal delay-2">
+                <div class="zigzag-content">
                     <h3>Mentorship</h3>
-                    <p>Guidance from industry-leading veterans and pioneers.</p>
+                    <p>Receive unparalleled guidance from industry-leading veterans and pioneers. Our mentorship program bridges the gap between generations, ensuring that knowledge, power, and success are passed down and amplified.</p>
+                </div>
+                <div class="zigzag-image">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=1500&auto=format&fit=crop" alt="Mentorship">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 1. The Pillars of Ethos -->
-    <section class="pillars-section">
-        <div class="container">
-            <h2 class="section-title text-center scroll-reveal">Core <span class="gradient-text">Values</span></h2>
-            <div class="cards-grid">
-                <div class="glass-card pillar-card scroll-reveal">
+    <!-- Expandable Hover Accordion: Core Values -->
+    <section class="accordion-section">
+        <h2 class="section-title text-center scroll-reveal">Core <span class="gradient-text">Values</span></h2>
+        
+        <div class="accordion-container scroll-reveal">
+            <div class="accordion-item" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1500&auto=format&fit=crop');">
+                <div class="accordion-overlay"></div>
+                <div class="accordion-content">
                     <h3>Excellence</h3>
-                    <p>We strive for the highest standards in every endeavor, pushing boundaries and setting new benchmarks in our respective fields.</p>
+                    <p class="accordion-desc">We strive for the highest standards in every endeavor, pushing boundaries and setting new benchmarks in our respective fields. Compromise is never an option when greatness is the goal.</p>
                 </div>
-                <div class="glass-card pillar-card scroll-reveal delay-1">
+            </div>
+            <div class="accordion-item" style="background-image: url('https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1500&auto=format&fit=crop');">
+                <div class="accordion-overlay"></div>
+                <div class="accordion-content">
                     <h3>Innovation</h3>
-                    <p>Embracing the future, our members are pioneers who drive technological, cultural, and business transformations worldwide.</p>
+                    <p class="accordion-desc">Embracing the future, our members are pioneers who drive technological, cultural, and business transformations worldwide. We don't just adapt to change; we author it.</p>
                 </div>
-                <div class="glass-card pillar-card scroll-reveal delay-2">
+            </div>
+            <div class="accordion-item active" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32d7?q=80&w=1632&auto=format&fit=crop');">
+                <div class="accordion-overlay"></div>
+                <div class="accordion-content">
                     <h3>Legacy</h3>
-                    <p>We believe in giving back, mentoring the next generation, and ensuring our impact echoes through the years to come.</p>
+                    <p class="accordion-desc">We believe in giving back, mentoring the next generation, and ensuring our impact echoes through the years to come. True success is measured by what you leave behind.</p>
                 </div>
             </div>
         </div>
@@ -213,6 +243,8 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

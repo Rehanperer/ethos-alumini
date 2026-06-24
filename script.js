@@ -24,43 +24,71 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { root: null, threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Fallback for cinematic scrollytelling in browsers lacking native CSS animation-timeline
-    if (!CSS.supports('(animation-timeline: view()) and (animation-range: entry)')) {
+    // --- GSAP ANIMATIONS ---
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Horizontal Scroll Section
+        const horizontalSection = document.querySelector('.horizontal-scroll-section');
+        const horizontalWrapper = document.querySelector('.horizontal-scroll-wrapper');
         
-        const storyScroll = document.querySelector('.scrolly-story');
-        const steps = document.querySelectorAll('.story-step');
-
-        window.addEventListener('scroll', () => {
-            if (storyScroll && steps.length > 0) {
-                const rect = storyScroll.getBoundingClientRect();
-                const topBound = rect.top; 
-                const height = rect.height - window.innerHeight; 
+        if (horizontalSection && horizontalWrapper) {
+            let mm = gsap.matchMedia();
+            
+            mm.add("(min-width: 769px)", () => {
+                const getScrollAmount = () => -(horizontalWrapper.scrollWidth - window.innerWidth);
                 
-                let progress = 0;
-                if (topBound <= 0) {
-                    progress = Math.min(1, -topBound / height);
-                }
-
-                steps.forEach((step, index) => {
-                    const stepCount = steps.length;
-                    const duration = 1 / stepCount;
-                    const start = index * duration;
-                    const end = (index + 1) * duration;
-                    const peak = (start + end) / 2;
-                    
-                    let opacity = 0;
-                    let translateY = 40;
-
-                    if (progress > start && progress < end) {
-                        const dist = Math.abs(progress - peak) / (duration / 2);
-                        opacity = 1 - dist;
-                        translateY = dist * (progress < peak ? 40 : -40);
-                    }
-                    
-                    step.style.opacity = Math.max(0, opacity);
-                    step.style.transform = `translateY(${translateY}px)`;
+                const tween = gsap.to(horizontalWrapper, {
+                    x: getScrollAmount,
+                    ease: "none"
                 });
-            }
+
+                ScrollTrigger.create({
+                    trigger: horizontalSection,
+                    start: "top top",
+                    end: () => `+=${getScrollAmount() * -1}`,
+                    pin: true,
+                    animation: tween,
+                    scrub: 1,
+                    invalidateOnRefresh: true
+                });
+                
+                // Parallax images
+                const parallaxImages = document.querySelectorAll('.parallax-img');
+                parallaxImages.forEach(img => {
+                    gsap.to(img, {
+                        x: "15%",
+                        ease: "none",
+                        scrollTrigger: {
+                            trigger: horizontalSection,
+                            start: "top top",
+                            end: () => `+=${getScrollAmount() * -1}`,
+                            scrub: 1,
+                            invalidateOnRefresh: true
+                        }
+                    });
+                });
+            });
+        }
+
+        // Advanced Reveal Animations
+        const revealElementsGSAP = document.querySelectorAll('.gs-reveal');
+        revealElementsGSAP.forEach(el => {
+            gsap.fromTo(el, 
+                { opacity: 0, y: 60, autoAlpha: 0 }, 
+                { 
+                    duration: 1.2, 
+                    opacity: 1, 
+                    y: 0, 
+                    autoAlpha: 1, 
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
         });
     }
 
@@ -85,5 +113,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
+    // Expandable Accordion Logic (Core Values)
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    accordionItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            accordionItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        });
+        // For touch devices
+        item.addEventListener('click', () => {
+            accordionItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+        });
+    });
 });
